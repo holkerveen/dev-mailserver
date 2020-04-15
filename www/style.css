@@ -1,0 +1,197 @@
+/* css */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #eee;
+}
+
+#app {
+    display: flex;
+    font: 200 14px/32px sans-serif;
+    height: 100%;
+    position: relative;
+}
+
+#app > ul {
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0 0 16px -10px #000;
+    margin: 0;
+    overflow: hidden;
+    flex: 0 0 340px;
+    z-index: 2;
+}
+
+#app > div {
+    flex: 1 0 240px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#app > div > article {
+    height: 100%;
+    overflow: auto;
+}
+
+.detail-component {
+    font: 200 16px/24px sans-serif;
+    color: #444;
+}
+
+.detail-component article {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-component header {
+    background: #f8f8f8;
+    padding: 16px;
+    flex: 0 0 auto;
+}
+
+.detail-component .flexgroup {
+    display: flex;
+}
+
+.detail-component .flexgroup h2 {
+    margin: 0;
+    flex: 1 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.detail-component .flexgroup button {
+    flex: 0 0 auto;
+    text-align: right;
+    border: 0;
+    background: none;
+    color: #348;
+    cursor:pointer;
+    font: inherit;
+}
+.detail-component .flexgroup button:hover {
+    text-decoration: underline;
+}
+
+.detail-component .from:before {
+    content: 'From: ';
+    color: #888;
+}
+
+.detail-component .to:before {
+    content: 'To: ';
+    color: #888;
+}
+
+.detail-component .received:before {
+    content: 'Received: ';
+    color: #888;
+}
+
+.detail-component .subject:before {
+    content: 'Subject: ';
+    color: #888;
+}
+
+.detail-component .headers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.detail-component .headers.closed:before {
+    content: 'View all headers';
+}
+
+.detail-component .headers .key {
+    color: #888;
+}
+
+.detail-component main {
+    overflow: auto;
+    flex: 1 0 auto;
+    padding: 0 16px;
+}
+
+.detail-component main pre {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.list-item {
+    padding: 8px 8px;
+    line-height: 1.4em;
+    cursor: pointer;
+}
+
+.list-item.selected {
+    background: #f8f8f8;
+}
+
+.list-item:hover {
+    background: #f4f8ff;
+}
+
+.list-addresses {
+    display: flex;
+    color: #34a;
+}
+
+.list-addresses .from {
+    flex: 1 1 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-addresses .sep {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-addresses .to {
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+.list-details {
+    display: flex;
+}
+
+.list-details .subject {
+    flex: 1 1 auto;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.list-details .received {
+    flex: 0 0 auto;
+    color: #888;
+}
+
+.messagebody {
+    padding: 16px 0;
+}
+.messagebody .part {
+    margin-bottom:48px;
+}
+
+.empty {
+    color: #888;
+    text-align: center;
+    margin: 40px 0;
+}
