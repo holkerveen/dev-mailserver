@@ -21,7 +21,9 @@ COPY www /www
 COPY src /src
 COPY stream.php /
 
-RUN mkdir -p /etc/service/php \
+RUN chmod 755 /usr/sbin/runit_bootstrap \
+ \
+ && mkdir -p /etc/service/php \
  && printf "#!/bin/sh\nset -e\n\nexec /usr/bin/php -S 0.0.0.0:80 -t /www\n" > /etc/service/php/run \
  && chmod 755 /etc/service/php/run \
  \
