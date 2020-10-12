@@ -11,9 +11,8 @@ RUN apk add --no-cache \
 	php7 \
 	php7-json \
 	php7-sockets \
-	php7-pecl-inotify \
 	php7-pcntl \
-	--repository http://dl-cdn.alpinelinux.org/alpine/edge/testing
+	inotify-tools
 
 COPY runit_bootstrap /usr/sbin/runit_bootstrap
 COPY rsyslog.conf /etc/rsyslog.conf

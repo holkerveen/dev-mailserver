@@ -26,10 +26,11 @@ The received mail is available through a very simple API and a web app. The web 
 
 # Getting started
 
-You can run the image standalone.
+You can build and run the image standalone.
 
 ```shell script
-docker run --rm -p80:80 -p81:81 -p25:25
+docker build -t holkerveen/dev-mailserver .
+docker run --rm -p80:80 -p81:81 -p25:25 holkerveen/dev-mailserver
 ```
 
 You will probably change your port numbers to allow other containers to run on port 80, however you will then need to tell the Web app where to find the websocket target as the default value will not work:
